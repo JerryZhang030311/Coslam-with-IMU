@@ -1,0 +1,98 @@
+cam:
+  H: 680
+  W: 1200
+  crop_edge: 0
+  cx: 599.5
+  cy: 339.5
+  depth_trunc: 100.0
+  far: 5
+  fx: 600.0
+  fy: 600.0
+  near: 0
+  png_depth_scale: 6553.5
+data:
+  downsample: 1
+  num_workers: 4
+  sc_factor: 1
+  translation: 0
+dataset: replica
+decoder:
+  geo_feat_dim: 15
+  hidden_dim: 32
+  hidden_dim_color: 32
+  num_layers: 2
+  num_layers_color: 2
+  tcnn_network: false
+grid:
+  enc: HashGrid
+  hash_size: 16
+  oneGrid: true
+  tcnn_encoding: true
+  voxel_color: 0.08
+  voxel_sdf: 0.02
+mapping:
+  cur_frame_iters: 100
+  filter_depth: false
+  first_iters: 200
+  every_first_iters: 50
+  first_mesh: true
+  iters: 100
+  keyframe_every: 5
+  lr_decoder: 0.01
+  lr_embed: 0.01
+  lr_rot: 0.001
+  lr_trans: 0.001
+  map_accum_step: 1
+  map_every: 5
+  map_wait_step: 0
+  min_pixels_cur: 100
+  n_pixels: 0.05
+  optim_cur: true
+  pose_accum_step: 5
+  sample: 2048
+mesh:
+  render_color: false
+  resolution: 512
+  vis: 50
+  visualisation: false
+  voxel_eval: 0.05
+  voxel_final: 0.02
+pos:
+  enc: OneBlob
+  n_bins: 16
+tracking:
+  CBA_rotation_loss_weight: 0.5
+  best: true
+  const_speed: true
+  ignore_edge_H: 20
+  ignore_edge_W: 20
+  iter: 100
+  iter_point: 0
+  lr_rot: 0.001
+  lr_trans: 0.001
+  pc_samples: 40960
+  sample: 1024
+  use_continuous_pose: true
+  wait_iters: 100
+training:
+  depth_weight: 0.1
+  eikonal_weight: 0
+  fs_weight: 10
+  i_posenet_weight: 0.1
+  n_importance: 0
+  n_range_d: 11
+  n_samples_d: 32
+  o_posenet_weight: 0.1
+  perturb: 1
+  range_d: 0.1
+  rgb_missing: 0.05
+  rgb_weight: 5.0
+  rot_rep: axis_angle
+  sdf_weight: 1000
+  smooth_margin: 0.05
+  smooth_pts: 32
+  smooth_vox: 0.1
+  smooth_weight: 1.0e-06
+  trunc: 0.1
+  white_bkgd: false
+  posenet_every: 50
